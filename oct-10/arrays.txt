@@ -1,0 +1,33 @@
+traversal :visiting every element 
+           go through the array and look  at each element
+
+           start=>look at the element => do smtg=> next element
+
+           total
+           avg,max,min
+           no.of pass,fail or odd even,+ or -
+           
+           [30,40,39,50,65,70,10,13,45,80]
+           dry run:
+         1.  sum
+           max
+           min
+           odd
+           even
+           2..  sum
+           max
+           min
+           odd
+           even
+
+
+
+questions:
+1.sum (of only  + and sum of only -)
+2.largest (even)
+3.smallest (odd)
+4.second largest
+5.second smallest
+6.no.of even
+7.no.of odd
+8.pass or fail 15 students

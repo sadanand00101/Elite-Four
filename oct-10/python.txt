@@ -1,0 +1,8 @@
+python=>
+comments?
+variables
+input
+operators
+** => exponent 
+if nested if 
+is isnot
