@@ -6,3 +6,79 @@ operators
 ** => exponent 
 if nested if 
 is isnot
+
+
+questions:
+PART 1 — BASICS
+
+1. Input name, age, city and print them.
+2. Input age and print age next year.
+3. Input 2 numbers and print +, -, *, /.
+4. Input length and width; find area and perimeter.
+5. Input 5 marks; find total and average.
+6. Convert Celsius to Fahrenheit.
+7. Calculate simple interest.
+8. Input price and quantity; find total.
+9. Convert seconds into hours, minutes and seconds.
+10. Input student details and print a profile.
+
+PART 2 — OPERATORS & CONDITIONS
+
+11. Check whether a number is positive, negative or zero.
+12. Check whether a number is even or odd.
+13. Check pass/fail using marks.
+14. Check adult/minor using age.
+15. Find the larger of two numbers.
+16. Find the largest of three numbers.
+17. Check whether a number is divisible by 3 and 5.
+18. Create a grade calculator.
+19. Create a username/password login.
+20. Print age category: Child, Teenager, Adult or Senior.
+
+PART 3 — LOOPS
+
+21. Print numbers 1–10.
+22. Print numbers 10–1.
+23. Print even numbers 1–100.
+24. Print odd numbers 1–100.
+25. Find sum of 1–N.
+26. Print multiplication table of a number.
+27. Find factorial of N.
+28. Find sum of digits.
+29. Reverse a number.
+30. Check whether a number is prime.
+
+PART 4 — STRINGS
+
+31. Print first and last character.
+32. Find string length.
+33. Reverse a string.
+34. Print uppercase and lowercase versions.
+35. Count a given character.
+36. Count vowels.
+37. Count words in a sentence.
+38. Check palindrome.
+39. Remove all spaces.
+40. Find the longest word.
+
+HARD — MIX LEVELS 1–4
+
+41. Build a number analyzer: digits, sum, largest digit, smallest digit, reverse and palindrome.
+
+42. Build a student result: 5 marks, total, average, highest, lowest, grade and pass/fail.
+
+43. Validate a password: 8+ chars, uppercase, lowercase and digit.
+
+44. Build a text analyzer: characters, words, vowels, consonants, digits, spaces and case counts.
+
+45. Build an ATM with balance, deposit, withdraw and exit.
+
+46. Build a number guessing game with hints and attempt count.
+
+47. Count the frequency of every character in a string.
+
+48. Build a shopping cart with price, quantity, total and discount.
+
+49. Validate username and password with multiple requirements.
+
+50. Build a student menu program: add student, calculate result, display result and exit.
