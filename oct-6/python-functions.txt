@@ -1,0 +1,88 @@
+PART 9 — FUNCTIONS
+1. What is a Function?
+   A reusable block of code that performs a specific task.
+   Definition: A function is a named block of code that can be called whenever needed.
+2. Creating a Function
+   Use def to create a function.
+   Definition: def defines a reusable function.
+3. Function Without Parameters
+   A function can work without receiving outside data.
+   Definition: A parameterless function takes no input values.
+4. Parameters
+   Parameters allow a function to receive data.
+   Definition: A parameter is a variable written inside the function definition.
+5. Multiple Parameters
+   A function can accept multiple inputs.
+   Definition: Multiple parameters allow several values to be passed to one function.
+6. return
+   Sends a result back from the function.
+   Definition: return ends the function and gives a value back to the caller.
+7. print() vs return
+   print() displays a result, while return gives the result back for further use.
+   Definition: print() shows data; return sends data out of a function.
+8. Returning Multiple Values
+   A function can return more than one value.
+   Definition: Python returns multiple values together, technically as a tuple.
+9. Default Parameters
+   A parameter can have a value used when no argument is provided.
+   Definition: A default parameter automatically uses its predefined value.
+10. Multiple Default Parameters
+    Multiple parameters can have default values.
+    Definition: Several parameters can provide fallback values when arguments are missing.
+11. Positional Arguments
+    Arguments are matched to parameters based on their position.
+    Definition: The first argument goes to the first parameter, second to second, and so on.
+12. Keyword Arguments
+    Arguments can be passed using parameter names.
+    Definition: Keyword arguments explicitly specify which parameter receives the value.
+13. Mixing Positional and Keyword Arguments
+    You can use both types together.
+    Definition: Positional arguments must come before keyword arguments.
+14. *args
+    Allows a function to accept any number of positional arguments.
+    Definition: *args collects extra positional arguments into a tuple.
+15. **kwargs
+    Allows a function to accept any number of keyword arguments.
+    Definition: **kwargs collects keyword arguments into a dictionary.
+16. *args vs **kwargs
+    *args handles positional values; **kwargs handles named values.
+    Definition: *args → tuple, **kwargs → dictionary.    Pasted markdown(2)
+17. Variable Scope
+    Variables created inside a function normally belong only to that function.
+    Definition: Scope determines where a variable can be accessed.
+18. Global Variables
+    Variables created outside functions can be accessed inside them.
+    Definition: A global variable exists outside function scope.
+19. Function Calling Another Function
+    One function can call another function to perform part of a task.
+    Definition: Functions can work together by calling each other.
+20. Function With Conditions
+    A function can use if, elif, and else.
+    Definition: Conditions allow a function to make decisions based on input.
+21. Function With Loops
+    A function can contain loops to repeat work.
+    Definition: Loops inside functions process repeated operations.
+22. Function With Lists
+    Functions can receive and process lists.
+    Definition: A list can be passed as an argument and processed inside a function.
+23. Function With Dictionary
+    Functions can receive and work with dictionaries.
+    Definition: A dictionary can be passed to a function as an argument.
+24. None
+    A function with no explicit return value returns None.
+    Definition: None represents the absence of a returned value.    Pasted markdown(2)
+25. Early return
+    return can stop a function before reaching the end.
+    Definition: An early return immediately exits the function.
+26. Practical Function Example
+    A large task can be divided into multiple smaller functions.
+    Definition: Each function should ideally handle one specific job.
+27. Recursion Basics
+    A function can call itself.
+    Definition: Recursion is when a function repeatedly calls itself until a base case stops it.
+28. Lambda Functions
+    A lambda is a small anonymous function.
+    Definition: A lambda creates a simple function using a short expression.    Pasted markdown(2)
+29. Why Functions Matter
+    Functions make programs reusable, readable, testable, and easier to maintain.
+    Definition: Functions divide large programs into smaller manageable tasks.    Pasted markdown(2)

@@ -1,0 +1,91 @@
+What is a Module?
+A module is a Python file containing reusable code.
+Definition: A module is a .py file that contains functions, variables, or other Python code.    Pasted markdown(2)
+
+Why Modules?
+Modules split a large program into smaller, organized files.
+Definition: Modules make code easier to reuse, understand, maintain, and manage.
+
+import
+Used to bring a module into your program.
+Definition: import allows you to use code from another module.
+
+from ... import
+Imports specific items from a module.
+Definition: It lets you use selected functions or variables without the module name.
+
+Import Multiple Items
+You can import several functions or items at once.
+Definition: Multiple items can be imported using commas.
+
+Import Everything *
+Imports all available items from a module.
+Definition: from module import * imports everything, but is generally avoided because it can cause confusion and name conflicts.
+
+Aliases
+Gives a module a shorter or different name.
+Definition: as creates an alternative name for an imported module.
+
+Built-in Modules
+Python provides many ready-to-use modules.
+Definition: Built-in modules come with Python and don't need separate installation.
+
+math
+Provides mathematical functions and constants.
+Definition: math is used for operations such as square root, powers, ceiling, floor, and π.    Pasted markdown(2)
+
+random
+Used to generate random values.
+Definition: random provides functions for random numbers, choices, and shuffling.
+
+datetime
+Used to work with dates and times.
+Definition: datetime provides tools for handling dates and time information.
+
+os
+Used to interact with the operating system.
+Definition: os provides functions for working with folders, files, and system information.
+
+sys
+Provides information and functions related to Python itself.
+Definition: sys gives access to Python runtime and system-related information.
+
+json
+Used to work with JSON data.
+Definition: JSON tools convert between Python objects and JSON data, which is important for APIs.
+
+json.dumps()
+Converts a Python object into a JSON string.
+Definition: dumps() performs Python object → JSON string conversion.
+
+json.loads()
+Converts a JSON string into a Python object.
+Definition: loads() performs JSON string → Python object conversion.    Pasted markdown(2)
+
+Creating Your Own Module
+You can create a .py file containing your own reusable functions.
+Definition: A custom module is a Python file created by you for reusable code.
+
+from calculator import
+Imports specific functions from your own module.
+Definition: It allows direct use of selected functions without writing the module name.
+
+__name__
+Helps determine whether a Python file is being run directly or imported.
+Definition: __name__ == "__main__" identifies code that should run when the file is executed directly.    Pasted markdown(2)
+
+What is a Package?
+A package is a folder containing Python modules.
+Definition: A package organizes multiple related Python modules into one structure.
+
+Real Project Structure
+Large projects divide code into folders and modules based on their responsibilities.
+Definition: Project structure organizes routes, models, utilities, configuration, and other components separately.
+
+Third-Party Packages
+These are external packages that don't come with Python.
+Definition: Third-party packages are installed separately, commonly using pip install.
+
+Module vs Package vs Library
+Module → one Python file. Package → collection of modules. Library → reusable collection of code.
+Definition: They are different levels of organizing and reusing Python code.

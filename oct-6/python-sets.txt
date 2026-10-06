@@ -1,0 +1,69 @@
+1. What is a Set?
+   A set stores unique values and automatically removes duplicates.
+   Definition: A set is a mutable, unordered collection of unique elements.
+2. Creating a Set
+   Create a set using curly braces {} or set().
+   Definition: set() creates an empty set.
+3. Duplicates
+   Duplicate values are automatically removed.
+   Definition: A set can contain each value only once.
+4. Sets Are Unordered
+   Sets do not use positions like lists.
+   Definition: Sets do not support indexing.
+5. add()
+   Adds one item to a set.
+   Definition: add() inserts a single element.
+6. update()
+   Adds multiple items to a set.
+   Definition: update() adds elements from another iterable.
+7. remove()
+   Removes a specific item.
+   Definition: remove() deletes an item and gives an error if it doesn't exist.
+8. discard()
+   Removes a specific item safely.
+   Definition: discard() removes an item without an error if it is missing.
+9. pop()
+   Removes an arbitrary item.
+   Definition: pop() removes and returns an element from the set.
+10. clear()
+    Removes all items.
+    Definition: clear() makes the set empty.
+11. Membership
+    Use in to check whether an item exists.
+    Definition: Set membership checks whether a value is present.
+12. Union
+    Combines all unique values from two sets.
+    Definition: | or union() returns elements from both sets.
+13. Intersection
+    Finds values present in both sets.
+    Definition: & or intersection() returns common elements.
+14. Difference
+    Finds values in one set but not the other.
+    Definition: - or difference() returns elements only in the first set.
+15. Symmetric Difference
+    Finds values that are different between two sets.
+    Definition: ^ returns elements in either set but not both.
+16. issubset()
+    Checks whether all elements of one set exist in another.
+    Definition: issubset() returns True when one set is completely contained in another.
+17. issuperset()
+    Checks whether a set contains another set completely.
+    Definition: issuperset() returns True when it contains all elements of another set.
+18. isdisjoint()
+    Checks whether two sets have no common elements.
+    Definition: isdisjoint() returns True when the sets have nothing in common.
+19. Sets + Loops
+    You can loop through every item in a set.
+    Definition: A loop processes set elements one by one, without depending on order.
+20. List → Set
+    Convert a list to a set to remove duplicates.
+    Definition: set(list) creates a set containing only unique values.
+21. Set → List
+    Convert a set back into a list.
+    Definition: list(set) creates a list from the set.
+22. Removing Duplicates
+    Sets are commonly used to get unique values from a list.
+    Definition: Converting a list to a set removes duplicate elements.
+23. Set DSA Pattern
+    Sets are useful for quickly checking duplicates and membership.
+    Definition: The set + loop pattern tracks values already seen.    Pasted markdown(2)

@@ -1,0 +1,111 @@
+What is a Dictionary?
+Stores data as key : value pairs.
+Definition: A mutable collection where each key maps to a value.
+
+Creating a Dictionary
+Use {} or dict().
+Definition: A dictionary contains key-value pairs.
+
+Accessing Values
+Use the key to get its value.
+Definition: dict[key] returns the value associated with that key.
+
+get()
+Safely gets a value from a key.
+Definition: get() returns the value or None/a default if the key is missing.
+
+Adding New Items
+Assign a value to a new key.
+Definition: dict[key] = value adds a new key-value pair.
+
+Updating Values
+Assign a new value to an existing key.
+Definition: Using an existing key replaces its old value.
+
+Multiple Updates
+Use update() to add or change multiple pairs.
+Definition: update() modifies a dictionary using another dictionary or iterable.
+
+pop()
+Removes a specific key-value pair.
+Definition: pop(key) removes the key and returns its value.
+
+popitem()
+Removes the last inserted key-value pair.
+Definition: popitem() removes and returns the last pair.
+
+del
+Deletes a specific key-value pair.
+Definition: del dict[key] removes the specified key.
+
+clear()
+Removes everything from the dictionary.
+Definition: clear() makes the dictionary empty.    Pasted markdown(2)
+
+Checking Keys
+Use in to check whether a key exists.
+Definition: key in dict checks keys, not values.
+
+keys()
+Gets all dictionary keys.
+Definition: keys() returns a view containing the dictionary's keys.
+
+values()
+Gets all dictionary values.
+Definition: values() returns a view containing the dictionary's values.
+
+items()
+Gets both keys and values.
+Definition: items() returns key-value pairs.
+
+Loop Through Dictionary
+You can loop through keys, values, or both.
+Definition: Dictionary loops process its keys or key-value pairs.
+
+Dictionary Length
+Use len() to count key-value pairs.
+Definition: len(dict) returns the number of keys.
+
+Different Data Types
+Dictionary values can have different data types.
+Definition: Values can be strings, numbers, lists, booleans, dictionaries, etc.
+
+Nested Dictionaries
+A dictionary can contain another dictionary.
+Definition: A nested dictionary stores dictionaries as values.
+
+List of Dictionaries
+A list can contain multiple dictionaries.
+Definition: This structure is commonly used for records and API/JSON data.
+
+Dictionary with List Values
+A dictionary value can be a list.
+Definition: A key can store multiple related values inside a list.
+
+Dictionary Comprehension
+Creates dictionaries using a compact loop-like syntax.
+Definition: {key: value for item in iterable} creates a dictionary.
+
+Counting Frequency
+Dictionaries can count how often values appear.
+Definition: A frequency dictionary maps each value to its occurrence count.
+
+Frequency of Characters
+Counts how many times each character appears.
+Definition: Each character becomes a key and its count becomes the value.
+
+setdefault()
+Gets a value if it exists or creates a default value.
+Definition: setdefault() returns the existing value or inserts a default.
+
+Dictionary Keys Must Be Hashable
+Keys must be suitable for hashing.
+Definition: Immutable types like strings, numbers, and tuples can generally be dictionary keys.
+
+Dictionary vs Other Collections
+Dictionary → key-value data.
+Definition: Use dictionaries when you need to connect a key with specific information.
+
+Common Dictionary Mistakes
+Common mistakes include using indexes and expecting duplicate keys.
+Definition: Dictionaries are accessed by keys, and duplicate keys overwrite earlier values.

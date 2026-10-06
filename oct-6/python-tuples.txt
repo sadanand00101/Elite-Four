@@ -1,0 +1,79 @@
+What is a Tuple?
+A tuple stores multiple values together.
+Definition: A tuple is an ordered, immutable collection written using ().
+
+Creating Tuples
+Tuples are created using parentheses ().
+Definition: A tuple can contain multiple values of different data types.
+
+Single-Item Tuple
+A single-item tuple needs a comma.
+Definition: (10,) is a tuple, while (10) is just an integer.
+
+Tuple Indexing
+Access tuple items using their position, starting from 0.
+Definition: Indexing accesses an element using its position.
+
+Tuple Slicing
+Gets a portion of a tuple.
+Definition: tuple[start:end] returns selected elements without changing the tuple.
+
+Tuples Are Immutable
+Tuple values cannot be changed after creation.
+Definition: Immutable means the existing elements cannot be modified.
+
+Why Use Tuples?
+Use tuples when the data should remain fixed.
+Definition: Tuples are useful for storing fixed groups of related values.
+
+Tuple Length
+Use len() to find the number of items.
+Definition: len(tuple) returns the number of elements.
+
+Checking Items
+Use in to check whether a value exists.
+Definition: The in operator returns True if the item exists.
+
+count()
+Counts how many times a value appears.
+Definition: count() returns the number of occurrences.
+
+index()
+Finds the position of a value.
+Definition: index() returns the index of the first matching value.
+
+Tuple + Loop
+You can loop through tuple elements.
+Definition: A loop processes each tuple item one by one.
+
+Tuple Unpacking
+Assigns tuple values to separate variables.
+Definition: Unpacking extracts tuple elements into individual variables.
+
+* Unpacking
+* collects multiple remaining values into one variable.
+Definition: Star unpacking stores the remaining elements in a list.
+
+Tuple to List
+Convert a tuple into a list using list().
+Definition: list(tuple) creates a mutable list from the tuple.
+
+List to Tuple
+Convert a list into a tuple using tuple().
+Definition: tuple(list) creates an immutable tuple from the list.
+
+Tuple Concatenation
+Combine two or more tuples using +.
+Definition: Concatenation joins tuples into a new tuple.
+
+Tuple Repetition
+Repeat tuple elements using *.
+Definition: tuple * n creates a new tuple containing repeated elements.
+
+Nested Tuples
+A tuple can contain other tuples.
+Definition: A nested tuple is a tuple containing one or more tuples.
+
+Tuple vs List
+Lists can change, while tuples cannot.
+Definition: Use a list for changeable data and a tuple for fixed data

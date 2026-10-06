@@ -1,0 +1,1271 @@
+# DSA ARRAYS — PART 4
+## Important Array Patterns
+
+Part 4 focuses on recognizing the pattern behind a problem instead of memorizing individual solutions. The seven main patterns are Linear Traversal, Two Pointers, Hashing/Frequency Map, Sliding Window, Prefix Sum, Sorting + Arrays, and Binary Search. Pasted text
+
+---
+
+## 1. Linear Traversal
+
+### Simple explanation
+Linear traversal means going through an array from the beginning to the end, one element at a time.
+
+### Why?
+Use it when you simply need to inspect every element.
+
+### Example
+`[4, 8, 2, 7, 10]`
+
+You visit:
+
+`4 → 8 → 2 → 7 → 10`
+
+### Example explanation
+You start at the first element and continue until the last element. You don't skip or jump around.
+
+---
+
+## 2. Find Sum Using Linear Traversal
+
+### Simple explanation
+Go through every element and keep adding the values.
+
+### Why?
+Useful when you need the total of all elements.
+
+### Example
+`[5, 10, 15, 20]`
+
+The calculation is:
+
+`5 → 15 → 30 → 50`
+
+Answer: `50`
+
+### Example explanation
+Start with `5`. Add `10` to get `15`, then `15` to get `30`, and finally `20` to get `50`.
+
+---
+
+## 3. Count Elements Using Linear Traversal
+
+### Simple explanation
+Check every element and increase a count whenever it satisfies a condition.
+
+### Why?
+Useful when questions ask "how many?"
+
+### Example
+`[-2, 5, -1, 8, 0, 7]`
+
+Positive numbers:
+
+`5, 8, 7`
+
+Answer: `3`
+
+### Example explanation
+Check each number. Only numbers greater than zero are counted.
+
+---
+
+## 4. When to Use Linear Traversal
+
+### Simple explanation
+Think about linear traversal when the problem asks you to inspect every element.
+
+### Why?
+You don't need a complicated pattern when simply checking every value is enough.
+
+### Example
+Problems such as:
+
+- Find largest
+- Find smallest
+- Find sum
+- Count values
+- Search for a value
+- Check every element
+
+### Example explanation
+For these problems, you can normally walk through the array from left to right and perform the required operation.
+
+---
+
+# 5. Two Pointers
+
+### Simple explanation
+Two pointers means using two positions in the array at the same time.
+
+Usually one starts from the left and one from the right.
+
+### Why?
+It can avoid unnecessary repeated work and often makes problems faster.
+
+### Example
+`[1, 2, 3, 4, 5]`
+
+One pointer starts at `1`.
+
+Another starts at `5`.
+
+They move toward the middle.
+
+### Example explanation
+Instead of using only one position, you work from both sides and move the pointers depending on the problem.
+
+---
+
+## 6. Two Pointers for Reversing
+
+### Simple explanation
+Use one pointer at the beginning and another at the end, then swap the elements.
+
+### Why?
+It allows you to reverse an array without creating another array.
+
+### Example
+`[1, 2, 3, 4, 5]`
+
+First:
+
+`1 ↔ 5`
+
+Array becomes:
+
+`[5, 2, 3, 4, 1]`
+
+Then:
+
+`2 ↔ 4`
+
+Result:
+
+`[5, 4, 3, 2, 1]`
+
+### Example explanation
+The pointers start at opposite ends and move toward the center. Once they meet, the reversal is finished.
+
+---
+
+## 7. Palindrome
+
+### Simple explanation
+A palindrome is something that reads the same from the front and from the back.
+
+### Why?
+Two pointers make it easy to compare the two ends.
+
+### Example
+`[1, 2, 3, 2, 1]`
+
+Compare:
+
+`1 = 1`
+
+`2 = 2`
+
+`3 = 3`
+
+### Example explanation
+Every value from the left matches the corresponding value from the right, so the array is a palindrome.
+
+---
+
+## 8. Two Sum in a Sorted Array
+
+### Simple explanation
+Find two numbers whose sum equals a target value.
+
+### Why?
+If the array is sorted, two pointers can find the pair efficiently.
+
+### Example
+Array:
+
+`[1, 2, 3, 4, 6, 8]`
+
+Target:
+
+`10`
+
+Start with:
+
+`1 + 8 = 9`
+
+Too small, so move the left pointer.
+
+Then:
+
+`2 + 8 = 10`
+
+Answer:
+
+`2 and 8`
+
+### Example explanation
+Because the array is sorted, if the sum is too small, move left toward larger values. If it is too large, move right toward smaller values.
+
+---
+
+## 9. When to Think "Two Pointers"
+
+### Simple explanation
+Think about two pointers when two positions can work together to solve the problem.
+
+### Why?
+It is especially useful when working from both ends or comparing two elements.
+
+### Example
+Clues include:
+
+- Sorted array
+- Pair of numbers
+- Reverse
+- Palindrome
+- Target sum
+- Elements from both ends
+- Rearranging elements
+
+### Example explanation
+When you see these clues, ask yourself: **"Can I solve this using two positions instead of checking everything?"**
+
+---
+
+# 10. Hashing
+
+### Simple explanation
+Hashing means quickly remembering information so you can check it later.
+
+### Why?
+It is useful when you need to know whether something has already appeared.
+
+### Example
+Array:
+
+`[4, 7, 2, 9, 7]`
+
+Remember:
+
+`4, 7, 2, 9`
+
+When you see `7` again, you already remember it.
+
+### Example explanation
+Because `7` was already stored, you immediately know that it is a duplicate.
+
+---
+
+## 11. Set
+
+### Simple explanation
+A Set stores unique values.
+
+### Why?
+Use it when you mainly care whether a value exists or has already been seen.
+
+### Example
+Array:
+
+`[2, 5, 2, 8, 5]`
+
+A Set can contain:
+
+`{2, 5, 8}`
+
+### Example explanation
+Repeated values are not stored again. This makes a Set useful for duplicate detection.
+
+---
+
+## 12. Map / Dictionary
+
+### Simple explanation
+A Map or Dictionary stores a relationship between a key and a value.
+
+### Why?
+It is useful when you need to store extra information about each value, especially counts.
+
+### Example
+`[2, 2, 3, 2, 5]`
+
+Frequency:
+
+`2 → 3`
+
+`3 → 1`
+
+`5 → 1`
+
+### Example explanation
+The number is the key, and its frequency is the information stored with it.
+
+---
+
+## 13. Check for Duplicates Using Hashing
+
+### Simple explanation
+Remember every value you see. If you see the same value again, a duplicate exists.
+
+### Why?
+It is much faster than comparing every pair.
+
+### Example
+`[4, 7, 2, 9, 7]`
+
+Check:
+
+`4 → new`
+
+`7 → new`
+
+`2 → new`
+
+`9 → new`
+
+`7 → already seen`
+
+### Example explanation
+The second `7` tells us that the array contains a duplicate.
+
+---
+
+## 14. Frequency Counting
+
+### Simple explanation
+Frequency means how many times each value appears.
+
+### Why?
+Many problems ask which value appears most, least, once, or multiple times.
+
+### Example
+`[2, 3, 2, 5, 3, 2]`
+
+Frequency:
+
+`2 → 3`
+
+`3 → 2`
+
+`5 → 1`
+
+### Example explanation
+Every time a number appears, its count increases.
+
+---
+
+## 15. Two Sum Using Hashing
+
+### Simple explanation
+Instead of checking every pair, remember previous values and look for the value needed to reach the target.
+
+### Why?
+It can reduce the amount of searching.
+
+### Example
+Array:
+
+`[2, 7, 11, 15]`
+
+Target:
+
+`9`
+
+For `2`, we need:
+
+`9 - 2 = 7`
+
+Later we see `7`.
+
+So:
+
+`2 + 7 = 9`
+
+### Example explanation
+The important idea is: **target − current value = value we need**.
+
+---
+
+## 16. When to Think "Hashing"
+
+### Simple explanation
+Think about hashing when you need to remember something from earlier in the array.
+
+### Why?
+A Set or Map lets you quickly check stored information.
+
+### Example
+Clues:
+
+- Duplicate
+- Already seen
+- Frequency
+- Count occurrences
+- Most frequent
+- Pair with target
+- Does this value exist?
+
+### Example explanation
+If the problem repeatedly asks whether you have seen a value before, hashing is often a good choice.
+
+---
+
+# 17. Sliding Window
+
+### Simple explanation
+Sliding Window means looking at a continuous section of an array and moving that section through the array.
+
+### Why?
+It avoids recalculating the same elements repeatedly.
+
+### Example
+Array:
+
+`[2, 4, 1, 6, 3, 5]`
+
+Window size = `3`
+
+First window:
+
+`[2, 4, 1]`
+
+Next:
+
+`[4, 1, 6]`
+
+Next:
+
+`[1, 6, 3]`
+
+Next:
+
+`[6, 3, 5]`
+
+### Example explanation
+The window keeps the same size while moving from left to right.
+
+---
+
+## 18. Fixed Sliding Window
+
+### Simple explanation
+A fixed sliding window always contains the same number of elements.
+
+### Why?
+It is useful when the problem says "K consecutive elements."
+
+### Example
+For window size `3`:
+
+`[2, 4, 1]`
+
+then:
+
+`[4, 1, 6]`
+
+then:
+
+`[1, 6, 3]`
+
+### Example explanation
+The window always contains exactly three elements. It simply shifts one position at a time.
+
+---
+
+## 19. Maximum Sum of K Consecutive Elements
+
+### Simple explanation
+Find the largest sum among all continuous groups of `K` elements.
+
+### Why?
+This is one of the classic sliding-window problems.
+
+### Example
+Array:
+
+`[2, 4, 1, 6, 3, 5]`
+
+`K = 3`
+
+Window sums:
+
+`2 + 4 + 1 = 7`
+
+`4 + 1 + 6 = 11`
+
+`1 + 6 + 3 = 10`
+
+`6 + 3 + 5 = 14`
+
+Answer: `14`
+
+### Example explanation
+The last group has the largest sum, so the answer is `14`.
+
+---
+
+## 20. Why Sliding Window Is Faster
+
+### Simple explanation
+When the window moves, you remove the old element and add the new element instead of calculating the entire sum again.
+
+### Why?
+This avoids repeated work.
+
+### Example
+Old window:
+
+`[2, 4, 1]`
+
+New window:
+
+`[4, 1, 6]`
+
+Remove `2` and add `6`.
+
+Old sum = `7`
+
+New sum:
+
+`7 - 2 + 6 = 11`
+
+### Example explanation
+Only two values changed, so there is no need to add all three values again.
+
+---
+
+## 21. When to Think "Sliding Window"
+
+### Simple explanation
+Think about sliding window when the problem involves a continuous section of an array.
+
+### Why?
+It is designed for subarray problems where elements must be next to each other.
+
+### Example
+Clues:
+
+- Consecutive elements
+- K consecutive elements
+- Continuous subarray
+- Maximum sum of K
+- Minimum sum of K
+- Longest continuous section
+- Shortest continuous section
+
+### Example explanation
+The important word to notice is often **"consecutive"** or **"continuous."**
+
+---
+
+# 22. Prefix Sum
+
+### Simple explanation
+Prefix Sum stores the total from the beginning of the array up to each position.
+
+### Why?
+It allows repeated range-sum calculations to become much faster.
+
+### Example
+Original:
+
+`[2, 4, 1, 5]`
+
+Prefix:
+
+`[2, 6, 7, 12]`
+
+### Example explanation
+The values are running totals:
+
+`2`
+
+`2 + 4 = 6`
+
+`2 + 4 + 1 = 7`
+
+`2 + 4 + 1 + 5 = 12`
+
+---
+
+## 23. Prefix Sum Example
+
+### Simple explanation
+Each prefix value tells you the total of everything before it, including itself.
+
+### Why?
+You can use these totals later instead of repeatedly adding elements.
+
+### Example
+Array:
+
+`[3, 2, 5, 1]`
+
+Prefix:
+
+`[3, 5, 10, 11]`
+
+### Example explanation
+At index `2`, the prefix value is `10` because `3 + 2 + 5 = 10`.
+
+---
+
+## 24. Range Sum Using Prefix Sum
+
+### Simple explanation
+A range sum means finding the total between two indexes.
+
+### Why?
+Prefix sums are especially useful when you have many range-sum questions.
+
+### Example
+Array:
+
+`[2, 4, 1, 5, 3]`
+
+Find the sum from index `1` to `3`.
+
+Those values are:
+
+`[4, 1, 5]`
+
+Answer:
+
+`10`
+
+### Example explanation
+The prefix total at the end of the range contains everything before it. By removing the part before the range, we get the required range sum.
+
+---
+
+## 25. When to Think "Prefix Sum"
+
+### Simple explanation
+Think about prefix sums when you repeatedly need sums of sections of an array.
+
+### Why?
+You calculate running totals once and reuse them.
+
+### Example
+Clues:
+
+- Range sum
+- Sum between indexes
+- Multiple sum queries
+- Running total
+- Subarray sum
+
+### Example explanation
+If the problem asks for many different sums from the same array, prefix sum should come to mind.
+
+---
+
+# 26. Sorting + Arrays
+
+### Simple explanation
+Sorting means arranging values in an order, usually smallest to largest or largest to smallest.
+
+### Why?
+Some problems become much easier when values are ordered.
+
+### Example
+Original:
+
+`[5, 2, 8, 1, 3]`
+
+Sorted:
+
+`[1, 2, 3, 5, 8]`
+
+### Example explanation
+Once the numbers are ordered, it becomes easier to identify smallest, largest, duplicates, and relationships between values.
+
+---
+
+## 27. Find Second Largest Using Sorting
+
+### Simple explanation
+Sort the array and then look at the second-last value.
+
+### Why?
+Sorting puts the largest values together.
+
+### Example
+`[10, 5, 20, 8, 15]`
+
+Sorted:
+
+`[5, 8, 10, 15, 20]`
+
+Second largest:
+
+`15`
+
+### Example explanation
+The largest is `20`, so the value immediately before it is the second largest.
+
+---
+
+## 28. Sorting + Two Pointers
+
+### Simple explanation
+Sometimes you first sort an array and then use two pointers.
+
+### Why?
+Sorting creates an ordered structure that makes pointer movement predictable.
+
+### Example
+Original:
+
+`[8, 2, 7, 3, 1, 6]`
+
+Sorted:
+
+`[1, 2, 3, 6, 7, 8]`
+
+### Example explanation
+After sorting, you can use the smallest and largest values from opposite ends and move them based on the required condition.
+
+---
+
+## 29. When to Think "Sorting"
+
+### Simple explanation
+Think about sorting when putting values in order will make the problem easier.
+
+### Why?
+Ordered values make comparisons and pointer movement easier.
+
+### Example
+Useful clues:
+
+- Find smallest/largest
+- Find pairs
+- Find duplicates
+- Values need ordering
+- Nearby values matter
+- Two pointers can help
+
+### Example explanation
+Don't sort automatically. First ask whether sorting actually helps solve the problem.
+
+---
+
+# 30. Binary Search
+
+### Simple explanation
+Binary Search finds a value by repeatedly cutting the search area in half.
+
+### Why?
+It is much faster than checking every element when the array is sorted.
+
+### Example
+`[2, 5, 8, 12, 16, 20, 25]`
+
+Find `20`.
+
+Check the middle:
+
+`12`
+
+Since `20` is larger, ignore the left half.
+
+Now search:
+
+`[16, 20, 25]`
+
+Middle is `20`.
+
+Found.
+
+### Example explanation
+Instead of checking every number, we eliminate half of the remaining possibilities after each comparison.
+
+---
+
+## 31. Why Binary Search Is Fast
+
+### Simple explanation
+Each step removes about half of the remaining search area.
+
+### Why?
+This makes the number of required checks very small even for large arrays.
+
+### Example
+Imagine `1,000` possible values.
+
+Instead of checking:
+
+`1 → 2 → 3 → 4...`
+
+you reduce:
+
+`1000 → 500 → 250 → 125 → ... → 1`
+
+### Example explanation
+The search space becomes smaller extremely quickly.
+
+Time complexity:
+
+`O(log n)`
+
+---
+
+## 32. Binary Search Requires a Sorted Array
+
+### Simple explanation
+Basic binary search needs an ordered search space.
+
+### Why?
+You need to know which half can safely be ignored.
+
+### Example
+Sorted:
+
+`[1, 3, 5, 7, 9]`
+
+If the middle is `5` and the target is `9`, you know the target must be on the right.
+
+### Example explanation
+Without sorting, you cannot safely decide which half to remove.
+
+---
+
+## 33. When to Think "Binary Search"
+
+### Simple explanation
+Think about binary search when the search space is sorted and you need to find something efficiently.
+
+### Why?
+It can reduce searching from `O(n)` to `O(log n)`.
+
+### Example
+Clues:
+
+- Sorted array
+- Find target
+- Search efficiently
+- Find first/last position
+- Find insertion position
+- Search space can be divided in half
+
+### Example explanation
+The strongest clue is usually **sorted + search**.
+
+---
+
+# 34. How to Choose the Pattern
+
+### Simple explanation
+Before coding, identify what kind of problem you are looking at.
+
+### Why?
+Recognizing the pattern is more important than memorizing solutions.
+
+### Example
+
+**Find largest number**
+
+→ Linear Traversal
+
+**Check palindrome**
+
+→ Two Pointers
+
+**Find duplicates**
+
+→ Hashing / Set
+
+**Find frequency**
+
+→ Map / Dictionary
+
+**Maximum sum of K consecutive elements**
+
+→ Sliding Window
+
+**Repeated range sums**
+
+→ Prefix Sum
+
+**Search sorted array**
+
+→ Binary Search
+
+### Example explanation
+The wording of the problem gives you clues about the correct technique.
+
+---
+
+# 35. Pattern: "Just Check Everything"
+
+### Simple explanation
+If there is no special condition and you simply need to inspect all elements, use linear traversal.
+
+### Why?
+There is no need to make the solution complicated.
+
+### Example
+"Find the largest number in the array."
+
+### Example explanation
+You simply look at every number and keep track of the largest one.
+
+---
+
+# 36. Pattern: "Already Seen"
+
+### Simple explanation
+If the problem asks whether something appeared before, think about hashing.
+
+### Why?
+A Set can remember previously seen values.
+
+### Example
+"Does this array contain duplicates?"
+
+`[4, 7, 2, 7]`
+
+### Example explanation
+When the second `7` appears, the Set tells us that `7` was already seen.
+
+---
+
+# 37. Pattern: "Frequency"
+
+### Simple explanation
+If the problem asks how many times something appears, think about a frequency map.
+
+### Why?
+A Map or Dictionary can connect each value to its count.
+
+### Example
+"Which number appears most often?"
+
+`[1, 3, 1, 2, 3, 1]`
+
+Frequency:
+
+`1 → 3`
+
+`3 → 2`
+
+`2 → 1`
+
+### Example explanation
+The highest frequency belongs to `1`.
+
+---
+
+# 38. Pattern: "Consecutive"
+
+### Simple explanation
+If the problem talks about consecutive or continuous elements, think about Sliding Window.
+
+### Why?
+Sliding Window works with a continuous section of an array.
+
+### Example
+"Find the maximum sum of 3 consecutive numbers."
+
+`[2, 4, 1, 6, 3]`
+
+### Example explanation
+Look at groups of three and slide the group across the array.
+
+---
+
+# 39. Pattern: "Range Sum"
+
+### Simple explanation
+If you need sums between different indexes repeatedly, think about Prefix Sum.
+
+### Why?
+It avoids repeatedly calculating the same values.
+
+### Example
+"Find the sum from index 2 to 5."
+
+### Example explanation
+A prefix array stores previous totals, allowing the required range to be calculated quickly.
+
+---
+
+# 40. Pattern: "Sorted + Search"
+
+### Simple explanation
+If an array is sorted and you need to find a target, think about Binary Search.
+
+### Why?
+Binary Search removes half of the search area at each step.
+
+### Example
+`[2, 5, 8, 12, 16, 20]`
+
+Find `16`.
+
+### Example explanation
+Check the middle, decide which half contains `16`, and continue until it is found.
+
+---
+
+# 41. Pattern: "Sorted + Pair"
+
+### Simple explanation
+If the array is sorted and you need two values that satisfy a condition, think about Two Pointers.
+
+### Why?
+The order tells you how to move the pointers.
+
+### Example
+`[1, 2, 3, 4, 6, 8]`
+
+Target = `10`
+
+Answer:
+
+`2 + 8 = 10`
+
+### Example explanation
+If the sum is too small, move left. If it is too large, move right.
+
+---
+
+# 42. Pattern Combinations
+
+### Simple explanation
+Real DSA problems can require more than one pattern.
+
+### Why?
+Patterns are tools that can be combined depending on the problem.
+
+### Example
+Two Sum can be solved using:
+
+`Hashing`
+
+or:
+
+`Sorting + Two Pointers`
+
+### Example explanation
+The same problem can have different solutions. You choose based on whether you care more about time, memory, or keeping the original array unchanged.
+
+---
+
+# 43. Brute Force
+
+### Simple explanation
+Brute force means starting with the simplest direct solution.
+
+### Why?
+It helps you understand the problem before trying to optimize it.
+
+### Example
+To find duplicate values, compare every element with every other element.
+
+### Example explanation
+It is easy to understand, but it can become slow when the array is large.
+
+---
+
+# 44. Optimization
+
+### Simple explanation
+Optimization means improving a solution so it uses less time or less memory.
+
+### Why?
+Efficient solutions are important when input sizes become large.
+
+### Example
+Duplicate detection:
+
+Brute force:
+
+`O(n²)`
+
+Hashing:
+
+`O(n)` average
+
+### Example explanation
+Hashing uses extra memory but avoids checking every pair.
+
+---
+
+# 45. Time vs Space Trade-off
+
+### Simple explanation
+Sometimes you can use more memory to make a program faster.
+
+### Why?
+This is a common decision in DSA.
+
+### Example
+Finding duplicates:
+
+Without extra memory:
+
+Repeated comparisons may take `O(n²)`.
+
+With a Set:
+
+Approximately `O(n)` time and `O(n)` extra space.
+
+### Example explanation
+You spend extra memory to remember values, which saves time.
+
+---
+
+# 46. Pattern Recognition Is the Main Skill
+
+### Simple explanation
+The goal is not to memorize hundreds of solutions. The goal is to recognize which technique fits a new problem.
+
+### Why?
+Interview problems will often look different from the problems you've practiced.
+
+### Example
+
+"Find largest"  
+→ Linear Traversal
+
+"Find duplicate"  
+→ Hashing
+
+"Find pair in sorted array"  
+→ Two Pointers
+
+"Maximum K consecutive sum"  
+→ Sliding Window
+
+"Many range sums"  
+→ Prefix Sum
+
+"Search sorted array"  
+→ Binary Search
+
+### Example explanation
+The wording changes, but the underlying pattern often stays the same.
+
+---
+
+# 47. Part 4 Final Pattern Map
+
+### Linear Traversal
+
+**Think:**  
+"Visit every element."
+
+**Example:**  
+Find the largest number.
+
+---
+
+### Two Pointers
+
+**Think:**  
+"Can two positions work together?"
+
+**Example:**  
+Reverse an array or find a pair in a sorted array.
+
+---
+
+### Hashing
+
+**Think:**  
+"Do I need to remember something?"
+
+**Example:**  
+Find duplicates.
+
+---
+
+### Frequency Map
+
+**Think:**  
+"How many times does each value appear?"
+
+**Example:**  
+Find the most frequent number.
+
+---
+
+### Sliding Window
+
+**Think:**  
+"Consecutive or continuous section?"
+
+**Example:**  
+Maximum sum of 3 consecutive elements.
+
+---
+
+### Prefix Sum
+
+**Think:**  
+"Do I need repeated range sums?"
+
+**Example:**  
+Find sums between different indexes.
+
+---
+
+### Sorting
+
+**Think:**  
+"Would ordering the values make this easier?"
+
+**Example:**  
+Find pairs or organize values before using two pointers.
+
+---
+
+### Binary Search
+
+**Think:**  
+"Sorted + searching?"
+
+**Example:**  
+Find `20` in a sorted array.
+
+---
+
+## The Most Important Recognition Rules
+
+```text
+"Just inspect everything"
+        ↓
+Linear Traversal
+
+"Two ends / pair / reverse"
+        ↓
+Two Pointers
+
+"Already seen / duplicate"
+        ↓
+Set / Hashing
+
+"How many times?"
+        ↓
+Frequency Map
+
+"Consecutive / continuous / K elements"
+        ↓
+Sliding Window
+
+"Repeated range sums"
+        ↓
+Prefix Sum
+
+"Need values ordered"
+        ↓
+Sorting
+
+"Sorted + search"
+        ↓
+Binary Search
+```
+
+This is the core of Part 4: **read the problem → notice the clue → identify the pattern → then think about the solution.** Pasted text
