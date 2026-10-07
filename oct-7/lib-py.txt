@@ -1,0 +1,301 @@
+# PART 12 — STANDARD LIBRARY
+
+Python comes with many built-in modules called the Standard Library. You don't need to memorize everything; focus on knowing useful modules and when to use them. Pasted text
+
+### 1. `math`
+
+**Simple explanation:** Used for mathematical operations.
+
+**Definition:** `math` is a built-in module that provides common mathematical functions.
+
+**Example:** Finding a square root, rounding numbers, or calculating a factorial. Pasted text
+
+---
+
+### 2. `random`
+
+**Simple explanation:** Used when you need random values.
+
+**Definition:** `random` is a module for generating random numbers and randomly selecting or rearranging items.
+
+**Example:** Generating a random number, choosing a random name, or shuffling a list. Pasted text
+
+---
+
+### 3. `datetime`
+
+**Simple explanation:** Used for working with dates and times.
+
+**Definition:** `datetime` provides tools for representing and working with date and time information.
+
+**Example:** Getting the current date and time or accessing the current year, month, day, hour, and minute. Pasted text
+
+---
+
+### 4. `date`
+
+**Simple explanation:** Used when you need a date without a specific time.
+
+**Definition:** `date` represents calendar dates without time information.
+
+**Example:** Getting today's date when you only care about the day, month, and year. Pasted text
+
+---
+
+### 5. `timedelta`
+
+**Simple explanation:** Used to add or subtract periods of time.
+
+**Definition:** `timedelta` represents a duration of time.
+
+**Example:** Finding tomorrow's date by adding one day or calculating a deadline seven days from today. Pasted text
+
+---
+
+### 6. `os`
+
+**Simple explanation:** Allows Python to interact with the operating system.
+
+**Definition:** `os` provides functions for working with the operating system, files, directories, and environment variables.
+
+**Example:** Finding the current folder, listing files, or reading an environment variable. Pasted text
+
+---
+
+### 7. `pathlib`
+
+**Simple explanation:** Provides a modern and easier way to work with file and directory paths.
+
+**Definition:** `pathlib` provides objects for handling filesystem paths.
+
+**Example:** Creating a path to a file and checking whether that file exists. Pasted text
+
+---
+
+### 8. File Operations With `Path`
+
+**Simple explanation:** `Path` can be used to read files, write files, and create directories.
+
+**Definition:** `Path` provides convenient methods for performing common filesystem operations.
+
+**Example:** Reading text from a file, writing text to a file, or creating a new folder. Pasted text
+
+---
+
+### 9. `sys`
+
+**Simple explanation:** Provides information about Python and the currently running program.
+
+**Definition:** `sys` gives access to Python interpreter information and program-level features.
+
+**Example:** Checking the Python version or reading command-line arguments. Pasted text
+
+---
+
+### 10. `json`
+
+**Simple explanation:** Used to work with JSON data, which is extremely important in backend development and APIs.
+
+**Definition:** `json` converts Python data into JSON and JSON data back into Python data.
+
+**Example:** Converting a Python dictionary into JSON before sending it through an API. Pasted text
+
+---
+
+### 11. `re`
+
+**Simple explanation:** Used for finding patterns inside text.
+
+**Definition:** `re` is Python's regular expression module for text-pattern matching.
+
+**Example:** Finding a phone number or other sequence of digits inside a sentence. Pasted text
+
+---
+
+### 12. `re.search()`
+
+**Simple explanation:** Searches for a pattern anywhere in a string.
+
+**Definition:** `re.search()` looks through the complete string for a matching pattern.
+
+**Example:** Searching for the word “Python” even if it appears in the middle of a sentence. Pasted text
+
+---
+
+### 13. `re.match()`
+
+**Simple explanation:** Checks whether a pattern appears at the beginning of a string.
+
+**Definition:** `re.match()` attempts to match a pattern starting from the beginning of the string.
+
+**Example:** Checking whether a sentence starts with the word “Python.” Pasted text
+
+---
+
+### 14. Groups
+
+**Simple explanation:** Groups allow you to capture specific parts of a matched pattern.
+
+**Definition:** Regex groups extract selected pieces of text from a pattern.
+
+**Example:** From text containing a name and age, groups can separately capture the person's name and age. Pasted text
+
+---
+
+### 15. `collections`
+
+**Simple explanation:** Provides specialized data structures that are useful for solving problems efficiently.
+
+**Definition:** `collections` is a module containing specialized container types.
+
+**Example:** Using `Counter` for frequency counting or `deque` for queues. Pasted text
+
+---
+
+### 16. `Counter`
+
+**Simple explanation:** Used to count how many times items occur.
+
+**Definition:** `Counter` is a specialized dictionary-like structure for counting values.
+
+**Example:** Counting how many times each number appears in a list or how many times each character appears in a word. Pasted text
+
+---
+
+### 17. `defaultdict`
+
+**Simple explanation:** A dictionary that automatically provides a default value when needed.
+
+**Definition:** `defaultdict` is a dictionary that creates a default value for missing keys.
+
+**Example:** Counting the frequency of items without first checking whether the key already exists. Pasted text
+
+---
+
+### 18. `deque`
+
+**Simple explanation:** A double-ended queue that allows adding and removing items from both ends.
+
+**Definition:** `deque` is a data structure optimized for operations at both ends.
+
+**Example:** Adding an item to the front or back of a queue and removing items from either end. Pasted text
+
+---
+
+### 19. `namedtuple`
+
+**Simple explanation:** Creates tuple-like objects whose values can be accessed using names.
+
+**Definition:** `namedtuple` creates tuple-like objects with named fields.
+
+**Example:** A student record can have named fields such as name and age instead of accessing values only by index. Pasted text
+
+---
+
+### 20. `itertools`
+
+**Simple explanation:** Provides useful tools for working with iterators and combinations of data.
+
+**Definition:** `itertools` is a module containing iterator-building functions.
+
+**Example:** Creating combinations, permutations, products, or joining multiple iterables. Pasted text
+
+---
+
+### 21. `chain()`
+
+**Simple explanation:** Combines multiple iterables into one sequence.
+
+**Definition:** `chain()` processes several iterables one after another.
+
+**Example:** Combining one list containing 1 and 2 with another list containing 3 and 4 to get one sequence containing all four values. Pasted text
+
+---
+
+### 22. `combinations()`
+
+**Simple explanation:** Creates groups of items where order does not matter.
+
+**Definition:** `combinations()` generates possible groups without considering different orders as different results.
+
+**Example:** Choosing two people from three people where choosing A then B is the same as choosing B then A. Pasted text
+
+---
+
+### 23. `permutations()`
+
+**Simple explanation:** Creates arrangements where order matters.
+
+**Definition:** `permutations()` generates different possible arrangements of items.
+
+**Example:** A-B and B-A are considered different arrangements because their order is different. Pasted text
+
+---
+
+### 24. `product()`
+
+**Simple explanation:** Creates every possible combination from multiple groups of choices.
+
+**Definition:** `product()` generates the Cartesian product of multiple iterables.
+
+**Example:** Combining two numbers with two letters to produce every possible number-letter pair. Pasted text
+
+---
+
+### 25. `functools`
+
+**Simple explanation:** Provides tools for working with functions.
+
+**Definition:** `functools` is a module containing utilities for modifying, combining, and optimizing functions.
+
+**Example:** Using `reduce`, `partial`, decorators with `wraps`, or caching with `lru_cache`. Pasted text
+
+---
+
+### 26. `reduce()`
+
+**Simple explanation:** Repeatedly combines values until they become one final result.
+
+**Definition:** `reduce()` applies an operation repeatedly across a sequence to produce a single value.
+
+**Example:** Adding 1, 2, 3, and 4 step by step until the final result is 10. Pasted text
+
+---
+
+### 27. `partial()`
+
+**Simple explanation:** Creates a new function with some arguments already fixed.
+
+**Definition:** `partial()` creates a modified function by pre-filling some of its arguments.
+
+**Example:** Creating a square function from a general power function by permanently setting the exponent to 2. Pasted text
+
+---
+
+### 28. `wraps`
+
+**Simple explanation:** Mainly used when creating decorators.
+
+**Definition:** `wraps` helps preserve information about the original function when a decorator modifies it.
+
+**Example:** A decorator changes how a function works while `wraps` helps keep the original function's information. Pasted text
+
+---
+
+### 29. `lru_cache`
+
+**Simple explanation:** Stores previous function results so repeated calculations can be faster.
+
+**Definition:** `lru_cache` provides caching for function results.
+
+**Example:** In recursive Fibonacci, previously calculated values can be reused instead of being calculated again. Pasted text
+
+---
+
+### 30. What You Actually Need to Remember
+
+**Simple explanation:** You don't need to memorize the entire Standard Library. You mainly need to know which module to use for a particular problem.
+
+**Definition:** Standard Library knowledge means knowing useful modules and their common purposes, then looking up exact syntax when necessary.
+
+**Example:** For DSA, think `collections`, `itertools`, and `functools`; for backend, think `json`, `os`, `pathlib`, `datetime`, and `re`. Pasted text

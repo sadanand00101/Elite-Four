@@ -1,0 +1,68 @@
+LEVEL 1 — VERY BASIC
+1.	Print every element of an array.
+2.	Print only elements at odd indexes.
+3.	Print the first element.
+4.	Print the last element.
+5.	Find the length of an array.
+6.	Find the sum.
+7.	Find the average.
+8.	Count even numbers.
+9.	Count odd numbers.
+10.	Find maximum.
+LEVEL 2 — BASIC PATTERNS
+11.	Count positive numbers.
+12.	Count negative numbers.
+13.	Count zeros.
+14.	Find minimum.
+15.	Find the sum of only even numbers.
+16.	Find the sum of only odd numbers.
+17.	Count numbers greater than 50.
+18.	Count numbers less than 20.
+19.	Find the largest number.
+20.	Find the smallest number.
+LEVEL 3 — SEARCHING
+21.	Check whether a target exists.
+22.	Find the index of a target.
+23.	Find the first occurrence.
+24.	Find the last occurrence.
+25.	Count how many times a target appears.
+26.	Search for a number and return -1 if not found.
+27.	Find whether an array contains any duplicate.
+LEVEL 4 — MANIPULATION
+28.	Reverse an array.
+29.	Reverse an array without using reverse().
+30.	Reverse an array using two pointers.
+31.	Reverse the first K elements.
+32.	Reverse a portion of an array.
+33.	Insert an element at the beginning.
+34.	Insert an element at the end.
+35.	Insert an element at a specific index.
+36.	Delete an element by index.
+37.	Delete the first occurrence of a value.
+LEVEL 5 — SET AND FREQUENCY
+38.	Remove duplicates.
+39.	Count unique elements.
+40.	Find duplicate elements.
+41.	Count frequency of every number.
+42.	Find the most frequent number.
+43.	Find the least frequent number.
+44.	Find the first unique number.
+45.	Check whether all elements are unique.
+46.	Find the first repeated number.
+47.	Find the value that occurs exactly twice.
+48.	Find all values that occur more than once.
+Given:
+[10, 20, 10, 30, 20, 40, 10,50,30]
+Find:
+1.	Sum
+2.	Average
+3.	Maximum
+4.	Minimum
+5.	Number of even values
+6.	Frequency of every value
+7.	Most frequent value
+8.	Least frequent value
+9.	Number of unique values
+10.	Duplicate values
+11.	First unique value
+12.	First repeated value

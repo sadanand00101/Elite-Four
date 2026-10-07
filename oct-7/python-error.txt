@@ -1,0 +1,300 @@
+# PART 11 — EXCEPTION HANDLING
+
+Exception handling is used to handle problems that happen while a Python program is running. Pasted text(6)
+
+### 1. Errors vs Exceptions
+
+**Simple explanation:** An error means something is wrong in the program. A syntax error means Python cannot understand the code, while an exception happens when valid code causes a problem during execution.
+
+**Definition:** An exception is a problem that occurs while a program is running and can be handled by the program.
+
+**Example:** Dividing a number by zero causes a `ZeroDivisionError`. Pasted text(6)
+
+---
+
+### 2. Common Exceptions
+
+**Simple explanation:** Python has different exception types for different kinds of problems.
+
+**Definition:** An exception type identifies the specific kind of problem that occurred.
+
+**Example:** Invalid conversion → `ValueError`, wrong data type → `TypeError`, invalid list position → `IndexError`. Pasted text(6)
+
+---
+
+### 3. `try`
+
+**Simple explanation:** `try` contains code that might cause an exception.
+
+**Definition:** A `try` block is used to test potentially risky code.
+
+**Example:** A calculation that might divide by zero can be placed inside `try`. Pasted text(6)
+
+---
+
+### 4. `except`
+
+**Simple explanation:** `except` handles an exception when something goes wrong inside `try`.
+
+**Definition:** An `except` block contains the instructions for handling an exception.
+
+**Example:** If division by zero occurs, `except` can display a message instead of allowing the program to crash. Pasted text(6)
+
+---
+
+### 5. Handling a Specific Exception
+
+**Simple explanation:** You can tell Python exactly which exception you want to handle.
+
+**Definition:** Specific exception handling catches only the particular error type you specify.
+
+**Example:** Handle `ZeroDivisionError` when a user tries to divide by zero. Pasted text(6)
+
+---
+
+### 6. Getting the Error Message
+
+**Simple explanation:** The exception can be stored so you can see the actual error message.
+
+**Definition:** The exception object contains information about the error that occurred.
+
+**Example:** A division-by-zero exception can provide the message “division by zero.” Pasted text(6)
+
+---
+
+### 7. Multiple Exceptions
+
+**Simple explanation:** One section of code can produce different exceptions.
+
+**Definition:** Multiple exception handling allows different problems to receive different responses.
+
+**Example:** Entering `"abc"` can cause `ValueError`, while entering `0` for a division can cause `ZeroDivisionError`. Pasted text(6)
+
+---
+
+### 8. Multiple Exceptions in One `except`
+
+**Simple explanation:** Several related exception types can be handled together when they need the same response.
+
+**Definition:** One `except` block can handle multiple specified exception types.
+
+**Example:** Two different input-related errors can show the same “Invalid input” message. Pasted text(6)
+
+---
+
+### 9. `else`
+
+**Simple explanation:** `else` runs only when the `try` block finishes without an exception.
+
+**Definition:** The `else` block contains code that should run after successful execution.
+
+**Example:** If a number is valid and division succeeds, the result can be displayed in `else`. Pasted text(7)
+
+---
+
+### 10. `finally`
+
+**Simple explanation:** `finally` runs whether an exception occurs or not.
+
+**Definition:** `finally` contains code that must execute after the `try`/`except` process.
+
+**Example:** A program can display “Program finished” even when an error occurs. Pasted text(7)
+
+---
+
+### 11. `try + except + else + finally`
+
+**Simple explanation:** These four parts can work together to handle errors, successful execution, and cleanup.
+
+**Definition:** `try` tests code, `except` handles errors, `else` handles success, and `finally` always runs.
+
+**Example:** A calculator can handle invalid input, show the result when successful, and then always display that the operation is finished. Pasted text(7)
+
+---
+
+### 12. Why `finally` Is Useful
+
+**Simple explanation:** `finally` is useful when something must be cleaned up regardless of whether the operation succeeds or fails.
+
+**Definition:** Cleanup code is code that should run after an operation is finished.
+
+**Example:** A file is opened and used, then closed whether an error occurs or not. Pasted text(7)
+
+---
+
+### 13. `raise`
+
+**Simple explanation:** `raise` lets you create an exception yourself.
+
+**Definition:** `raise` manually triggers an exception when a condition is not acceptable.
+
+**Example:** If an age is negative, the program can raise a `ValueError` saying the age cannot be negative. Pasted text(7)
+
+---
+
+### 14. `raise` With a Function
+
+**Simple explanation:** A function can raise an exception when it receives invalid data.
+
+**Definition:** Raising an exception inside a function allows the function to reject invalid input.
+
+**Example:** An age-checking function can raise an error when it receives a negative age. Pasted text(7)
+
+---
+
+### 15. `raise` With `try/except`
+
+**Simple explanation:** You can manually raise an exception and then handle it using `try/except`.
+
+**Definition:** This combines manually triggered errors with normal exception handling.
+
+**Example:** A negative age raises `ValueError`, and `except` catches it and displays the message. Pasted text(7)
+
+---
+
+### 16. Custom Exceptions
+
+**Simple explanation:** Python allows you to create your own exception types.
+
+**Definition:** A custom exception is an application-specific exception created from Python's exception system.
+
+**Example:** An application can create an `AgeError` specifically for invalid ages. Pasted text(6)
+
+---
+
+### 17. Custom Exception Example
+
+**Simple explanation:** Custom exceptions make errors more meaningful in larger applications.
+
+**Definition:** A custom exception represents a specific problem defined by the application's requirements.
+
+**Example:** A banking application can have an `InsufficientBalanceError` when someone tries to withdraw more money than available. Pasted text(6)
+
+---
+
+### 18. Custom Exception With `try/except`
+
+**Simple explanation:** A custom exception can be raised and then handled just like Python's built-in exceptions.
+
+**Definition:** Custom exception handling allows application-specific errors to be caught and handled.
+
+**Example:** An `AgeError` is raised for a negative age and then caught to display the appropriate message. Pasted text(6)
+
+---
+
+### 19. Exception Hierarchy
+
+**Simple explanation:** Python exceptions are organized in a hierarchy, like a family tree.
+
+**Definition:** Exception hierarchy describes the parent-child relationship between different exception classes.
+
+**Example:** `ValueError`, `TypeError`, `IndexError`, and `KeyError` are under `Exception`. Pasted text(6)
+
+---
+
+### 20. Why Exception Hierarchy Matters
+
+**Simple explanation:** Understanding the hierarchy helps you decide whether to catch a specific exception or a broader parent exception.
+
+**Definition:** Exception hierarchy allows related exceptions to be handled at different levels.
+
+**Example:** You can specifically catch `ValueError`, or use the broader `Exception` when appropriate. Pasted text(6)
+
+---
+
+### 21. Specific vs General Exception
+
+**Simple explanation:** Specific exceptions are usually better because they tell you exactly what problem you are handling.
+
+**Definition:** Specific handling catches a known error type, while general handling catches a broader range of errors.
+
+**Example:** Instead of simply saying “Error,” handle `ValueError` and tell the user to enter a valid number. Pasted text(6)
+
+---
+
+### 22. Good Error Messages
+
+**Simple explanation:** Error messages should tell the user what actually went wrong.
+
+**Definition:** A good error message clearly explains the problem and, when useful, what the user should do.
+
+**Example:** “Please enter a valid number” is more useful than simply saying “Error.” Pasted text(7)
+
+---
+
+### 23. Input Validation
+
+**Simple explanation:** Input validation checks whether user-provided values follow the rules of the program.
+
+**Definition:** Validation is the process of checking whether a value is acceptable according to specific rules.
+
+**Example:** `"abc"` is not a valid integer, while `"-5"` is an integer but may be invalid as an age. Pasted text(6)
+
+---
+
+### 24. Practical Example — Calculator
+
+**Simple explanation:** A calculator can use exception handling to deal with invalid numbers and division by zero.
+
+**Definition:** Exception handling makes the calculator respond safely to invalid operations.
+
+**Example:** Entering text instead of a number causes `ValueError`; using zero as the divisor causes `ZeroDivisionError`. Pasted text(6)
+
+---
+
+### 25. Practical Example — List Access
+
+**Simple explanation:** Exception handling can prevent problems when users provide invalid list indexes.
+
+**Definition:** Safe list access means handling invalid input or indexes instead of allowing the program to crash.
+
+**Example:** Entering a non-number causes `ValueError`, while entering an index outside the list causes `IndexError`. Pasted text(6)
+
+---
+
+### 26. Practical Example — Dictionary
+
+**Simple explanation:** Exception handling can deal with requests for dictionary keys that do not exist.
+
+**Definition:** Safe dictionary access means handling a missing key properly.
+
+**Example:** If a student dictionary contains `name` and `age`, requesting `marks` can cause a `KeyError`. Pasted text(6)
+
+---
+
+### 27. Don't Hide Errors
+
+**Simple explanation:** Do not silently ignore errors because you may not realize that your program is broken.
+
+**Definition:** Error handling should intentionally respond to problems rather than simply hiding them.
+
+**Example:** Showing “Invalid value” is better than ignoring the exception completely. Pasted text(6)
+
+---
+
+### 28. Exception Handling Mindset
+
+**Simple explanation:** Before writing error handling, think about what can go wrong, which exception can happen, and how the user should be informed.
+
+**Definition:** Exception handling mindset means planning how your program should respond to possible failures.
+
+**Example:** If a user enters `"abc"` where a number is required, identify `ValueError` and ask for a valid number. Pasted text(7)
+
+---
+
+### 29. Important Structure to Remember
+
+**Simple explanation:** The basic structure is: `try` for risky code, `except` for errors, `else` for success, and `finally` for code that always runs.
+
+**Definition:** This structure provides a complete way to handle risky operations and their outcomes.
+
+**Example:** A program tries an operation, handles a failure if it happens, performs success-related work if everything is fine, and finally performs cleanup. Pasted text(7)
+
+### Quick memory
+
+`try` → risky code  
+`except` → handle the problem  
+`else` → success  
+`finally` → always runs  
+`raise` → create an error yourself  
+`custom exception` → create meaningful application-specific errors Pasted text(7)

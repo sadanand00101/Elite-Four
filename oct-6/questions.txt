@@ -1,0 +1,77 @@
+# PART 5 — LISTS
+
+1. Create a list of 5 numbers.
+2. Print the first and last element.
+3. Change the third element.
+4. Add an element using `append()`.
+5. Add multiple elements using `extend()`.
+6. Remove an element using `remove()`.
+7. Find the largest element.
+8. Find the smallest element.
+9. Count even numbers.
+10. Remove duplicates from a list.
+
+# PART 6 — TUPLES
+
+1. Create a tuple of 5 numbers.
+2. Print the first and last element.
+3. Find the length of a tuple.
+4. Count a given value.
+5. Find the index of a value.
+6. Check whether a value exists.
+7. Reverse a tuple.
+8. Convert a tuple to a list.
+9. Convert a list to a tuple.
+10. Unpack a student tuple.
+
+# PART 7 — SETS
+
+1. Create a set of 5 numbers.
+2. Add an element using `add()`.
+3. Add multiple elements using `update()`.
+4. Remove an element using `remove()`.
+5. Check whether an element exists.
+6. Find the union of two sets.
+7. Find the intersection of two sets.
+8. Find the difference of two sets.
+9. Find common elements in two lists.
+10. Remove duplicates from a list using a set.
+
+# PART 8 — DICTIONARIES
+
+1. Create a student dictionary.
+2. Print a value using its key.
+3. Add a new key-value pair.
+4. Update an existing value.
+5. Remove a key using `pop()`.
+6. Check whether a key exists.
+7. Print all keys.
+8. Print all values.
+9. Count character frequency.
+10. Find the student with the highest marks.
+
+# PART 9 — FUNCTIONS
+
+1. Create a function that prints Hello.
+2. Create a function that takes a name.
+3. Create a function to add two numbers.
+4. Create a function to find a square.
+5. Create a function to check even/odd.
+6. Create a function to find the largest number.
+7. Create a function to find the sum of a list.
+8. Create a function to count even numbers.
+9. Create a function to calculate factorial.
+10. Create a function to reverse a string.
+
+# PART 10 — MODULES & PACKAGES
+
+1. Import `math` and find a square root.
+2. Import `math` and calculate factorial.
+3. Generate a random number from 1–100.
+4. Choose a random item from a list.
+5. Print the current date and time.
+6. Print the Python version using `sys`.
+7. Print the current directory using `os`.
+8. Convert a dictionary to JSON.
+9. Convert JSON to a Python dictionary.
+10. Create and import your own calculator module.
