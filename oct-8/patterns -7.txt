@@ -1,0 +1,1295 @@
+
+# Array DSA Patterns — Simple Summary
+
+The file covers 4 important array patterns:
+
+1. Linear Traversal
+2. Two Pointers
+3. Sliding Window
+4. Hashing / Frequency Map
+
+The main goal is not just to memorize code.
+
+The goal is:
+
+> See a problem → recognize the pattern → choose the right approach.
+
+---
+
+# 1. Linear Traversal
+
+## What is Linear Traversal?
+
+Linear traversal means:
+
+> Go through every element of the array one by one.
+
+Example:
+
+[4, 7, 2, 9, 5,10,11]
+
+You look at:  
+
+`4 → 7 → 2 → 9 → 5`
+
+You don't skip elements.
+
+You simply start from the beginning and continue until the end. Pasted text
+
+## Why do we use it?
+
+Use it when you need information from every element.
+
+For example:
+
+- Find maximum
+- Find minimum
+- Find sum
+- Count elements
+- Search for something
+- Count even numbers
+- Count numbers greater than 10
+
+Basically:
+
+> "I need to look at every element."
+
+Think Linear Traversal.
+
+---
+
+## Example 1 — Find Maximum
+
+Array:
+
+`[4, 8, 2, 9, 5]`
+
+We want the biggest number.
+
+Start with:
+
+`maximum = 4`
+
+Then check:
+
+- 8 is bigger than 4 → maximum becomes 8
+- 2 is not bigger than 8
+- 9 is bigger than 8 → maximum becomes 9
+- 5 is not bigger than 9
+
+Answer:
+
+`9`
+
+### Simple idea
+
+Keep one variable that remembers the biggest number found so far.
+
+---
+
+## Example 2 — Find Sum
+
+Array:
+
+`[2, 5, 3, 4]`
+
+Start:
+
+`sum = 0`
+
+Then:
+
+`0 + 2 = 2`
+
+`2 + 5 = 7`
+
+`7 + 3 = 10`
+
+`10 + 4 = 14`
+
+Answer:
+
+`14`
+
+### Simple idea
+
+Keep adding every element to one variable.
+
+---
+
+## Example 3 — Count Even Numbers
+
+Array:
+
+`[2, 7, 4, 9, 6]`
+
+Even numbers are:
+
+`2, 4, 6`
+
+There are 3.
+
+So answer:
+
+`3`
+
+### Simple idea
+
+Look at every number.
+
+If it is even, increase the count.
+
+---
+
+## Linear Traversal Pattern
+
+Think:
+
+> "Go through everything."
+
+Typical problems:
+
+- Maximum
+- Minimum
+- Sum
+- Count
+- Search
+- Average
+- Simple condition checking
+
+### Complexity
+
+Usually:
+
+- Time: `O(n)`
+- Space: `O(1)`
+
+If there are 100 elements, you may check about 100 elements.
+
+---
+
+# 2. Two Pointers
+
+## What is Two Pointers?
+
+Two Pointers means:
+
+> Use two positions in the array and move them according to the problem.
+
+Usually:
+
+`left →          ← right`
+
+Example:
+
+`[1, 2, 3, 4, 5, 6]`
+
+One pointer starts from the left.
+
+Another starts from the right. Pasted text
+
+---
+
+## Why use Two Pointers?
+
+Imagine you want to reverse:
+
+`[1, 2, 3, 4, 5]`
+
+Instead of creating another array:
+
+- left points to `1`
+- right points to `5`
+- swap them
+
+Now:
+
+`[5, 2, 3, 4, 1]`
+
+Move inward.
+
+Swap `2` and `4`.
+
+Result:
+
+`[5, 4, 3, 2, 1]`
+
+So two pointers can solve the problem efficiently.
+
+---
+
+## When should you think Two Pointers?
+
+Look for:
+
+- Reverse
+- Palindrome
+- First and last elements
+- Pair of elements
+- Sorted array
+- Moving elements
+- Comparing two positions
+
+Think:
+
+> "Can I solve this using two positions?"
+
+---
+
+# Example 1 — Reverse an Array
+
+Array:
+
+`[1, 2, 3, 4, 5]`
+
+Start:
+
+`left = 1`
+
+`right = 5`
+
+Swap:
+
+`[5, 2, 3, 4, 1]`
+
+Move pointers inward.
+
+Now compare:
+
+`2` and `4`
+
+Swap:
+
+`[5, 4, 3, 2, 1]`
+
+Stop when the pointers meet or cross.
+
+### Simple idea
+
+> Swap the first and last, then move toward the center.
+
+---
+
+# Example 2 — Check Palindrome
+
+A palindrome reads the same from both directions.
+
+Example:
+
+`[1, 2, 3, 2, 1]`
+
+Compare:
+
+`1 ↔ 1`
+
+They match.
+
+Then:
+
+`2 ↔ 2`
+
+They match.
+
+Then:
+
+`3 ↔ 3`
+
+They match.
+
+Therefore it is a palindrome.
+
+### What if they don't match?
+
+Example:
+
+`[1, 2, 3, 4, 1]`
+
+First and last:
+
+`1 ↔ 1` ✅
+
+Second and second-last:
+
+`2 ↔ 4` ❌
+
+Therefore:
+
+> Not a palindrome.
+
+### Simple idea
+
+> Compare both ends and move toward the center.
+
+---
+
+# Example 3 — Two Sum in Sorted Array
+
+Array:
+
+`[1, 2, 4, 6, 8, 10]`
+
+Target:
+
+`10`
+
+Start:
+
+Left = `1`
+
+Right = `10`
+
+Sum:
+
+`1 + 10 = 11`
+
+Too large.
+
+So move right backward.
+
+Now:
+
+`1 + 8 = 9`
+
+Too small.
+
+So move left forward.
+
+Now:
+
+`2 + 8 = 10`
+
+Found!
+
+Answer:
+
+`2 + 8 = 10`
+
+## Why does this work?
+
+The important thing is:
+
+> The array is sorted.
+
+If the sum is too small:
+
+> Move left forward to get a bigger number.
+
+If the sum is too large:
+
+> Move right backward to get a smaller number.
+
+This is one of the most important Two Pointer ideas. Pasted text
+
+---
+
+# Two Pointer Pattern
+
+Think:
+
+> "I have two positions that I can move."
+
+Common problems:
+
+- Reverse array
+- Palindrome
+- Two Sum in sorted array
+- Remove duplicates
+- Move zeros
+- Some container problems
+
+Usually:
+
+- Time: `O(n)`
+- Space: `O(1)`
+
+---
+
+# 3. Sliding Window
+
+## What is Sliding Window?
+
+Sliding Window means:
+
+> Focus on a continuous section of the array and move that section forward.
+
+Imagine this:
+
+`[2, 4, 6] 8 10`
+
+The window contains:
+
+`2, 4, 6`
+
+Move it:
+
+`2 [4, 6, 8] 10`
+
+Move again:
+
+`2 4 [6, 8, 10]`
+
+The window keeps sliding. Pasted text
+
+---
+
+# Why use Sliding Window?
+
+Suppose:
+
+`[2, 4, 6, 8, 10]`
+
+You want the sum of every 3 consecutive numbers.
+
+You need:
+
+`2 + 4 + 6 = 12`
+
+Then:
+
+`4 + 6 + 8 = 18`
+
+Then:
+
+`6 + 8 + 10 = 24`
+
+Notice something?
+
+The numbers `4` and `6` were already used.
+
+Instead of calculating everything again, we can:
+
+> Remove the number leaving the window and add the number entering the window.
+
+For example:
+
+Previous sum:
+
+`12`
+
+Remove `2`:
+
+`12 - 2 = 10`
+
+Add `8`:
+
+`10 + 8 = 18`
+
+That's the main idea of Sliding Window.
+
+---
+
+# When should you use Sliding Window?
+
+Look for words like:
+
+- Subarray
+- Continuous
+- Consecutive
+- Maximum sum
+- Minimum sum
+- Longest
+- Shortest
+- Exactly K
+- At most K
+- At least K
+
+Ask:
+
+> "Am I dealing with a continuous part of the array?"
+
+If yes, think:
+
+**Sliding Window**
+
+---
+
+# Two Types of Sliding Window
+
+There are two important types:
+
+1. Fixed-size window
+2. Variable-size window
+
+---
+
+# 3.1 Fixed-Size Sliding Window
+
+The window size stays the same.
+
+Example:
+
+Array:
+
+`[2, 1, 5, 1, 3]`
+
+`K = 3`
+
+Windows:
+
+`[2, 1, 5]`
+
+`[1, 5, 1]`
+
+`[5, 1, 3]`
+
+Each window contains exactly 3 elements.
+
+Sums:
+
+`8`
+
+`7`
+
+`9`
+
+Maximum:
+
+`9`
+
+### Simple idea
+
+> The window size is always K.
+
+Typical problems:
+
+- Maximum sum of K elements
+- Minimum sum of K elements
+- Average of K elements
+
+---
+
+# Example — Maximum Sum of K Elements
+
+Array:
+
+`[2, 1, 5, 1, 3]`
+
+K = `3`
+
+First window:
+
+`[2, 1, 5]`
+
+Sum:
+
+`8`
+
+Move window.
+
+Remove `2`.
+
+Add the next `1`.
+
+New sum:
+
+`8 - 2 + 1 = 7`
+
+Move again.
+
+Remove `5`.
+
+Add `3`.
+
+New sum:
+
+`7 - 5 + 3 = 5`
+
+So the window sums are:
+
+`8, 7, 5`
+
+The source's worked example identifies the maximum as `9` for the windows it presents; the important pattern is the reuse of the previous window sum. Pasted text
+
+---
+
+# 3.2 Variable-Size Sliding Window
+
+Here the window size can change.
+
+The window can:
+
+- Expand
+- Shrink
+
+Example:
+
+`[2, 3, 1, 2, 4, 3]`
+
+Target:
+
+`7`
+
+We want:
+
+> Smallest continuous subarray whose sum is at least 7.
+
+Start expanding:
+
+`[2] = 2`
+
+`[2, 3] = 5`
+
+`[2, 3, 1] = 6`
+
+`[2, 3, 1, 2] = 8`
+
+Now we reached at least 7.
+
+So we try to make the window smaller.
+
+Remove `2`:
+
+`[3, 1, 2] = 6`
+
+Now it is too small.
+
+Later we find:
+
+`[4, 3] = 7`
+
+Length:
+
+`2`
+
+So the answer is:
+
+`2`
+
+### Simple idea
+
+> Expand until the condition becomes true, then shrink to find a better/smaller window.
+
+---
+
+# Fixed vs Variable Window
+
+## Fixed
+
+Window size doesn't change.
+
+Example:
+
+`K = 3`
+
+`[1 2 3]`
+
+`[2 3 4]`
+
+`[3 4 5]`
+
+Think:
+
+> "Exactly K elements."
+
+---
+
+## Variable
+
+Window size changes.
+
+Example:
+
+`[1]`
+
+`[1 2]`
+
+`[1 2 3]`
+
+Then it may shrink:
+
+`[2 3]`
+
+Think:
+
+> "Find the longest/shortest continuous section satisfying a condition."
+
+---
+
+# 4. Hashing / Frequency Map
+
+## What is Hashing?
+
+Hashing means:
+
+> Remember information about values so you can quickly find that information later.
+
+In JavaScript, common structures are:
+
+- `Map`
+- `Set`
+
+In Python:
+
+- `dict`
+- `set`
+
+Think of hashing like a notebook where you remember things you've already seen. Pasted text
+
+---
+
+# Simple Example
+
+Array:
+
+`[2, 5, 2, 8, 5, 2]`
+
+We can remember:
+
+`2 → 3 times`
+
+`5 → 2 times`
+
+`8 → 1 time`
+
+Now we don't need to repeatedly count the array.
+
+---
+
+# Why use Hashing?
+
+Hashing is useful when you need to know:
+
+- Have I seen this before?
+- How many times did it appear?
+- Does this value exist?
+- Where did I see this value?
+- Is this a duplicate?
+- Can I find a pair quickly?
+
+Think:
+
+> "Would remembering previous elements make this problem easier?"
+
+If yes, think Hashing.
+
+---
+
+# Example 1 — Frequency Count
+
+Array:
+
+`[2, 3, 2, 5, 3, 2]`
+
+We want:
+
+`2 → 3`
+
+`3 → 2`
+
+`5 → 1`
+
+We go through the array.
+
+First `2`:
+
+`2 → 1`
+
+Second `2`:
+
+`2 → 2`
+
+Third `2`:
+
+`2 → 3`
+
+Same idea for the other numbers.
+
+### Simple idea
+
+> Keep a counter for every value.
+
+---
+
+# Example 2 — Find Duplicate
+
+Array:
+
+`[4, 2, 7, 2, 9]`
+
+Start with an empty Set.
+
+See `4`:
+
+Remember `4`.
+
+See `2`:
+
+Remember `2`.
+
+See `7`:
+
+Remember `7`.
+
+See `2` again:
+
+We already remember `2`.
+
+Therefore:
+
+> `2` is a duplicate.
+
+### Simple idea
+
+> Remember every number. If you see it again, it's a duplicate.
+
+---
+
+# Example 3 — Two Sum Using Hashing
+
+Array:
+
+`[2, 7, 11, 15]`
+
+Target:
+
+`9`
+
+Start with `2`.
+
+We need:
+
+`9 - 2 = 7`
+
+Have we seen `7`?
+
+No.
+
+Remember `2`.
+
+Next number:
+
+`7`
+
+We need:
+
+`9 - 7 = 2`
+
+Have we already seen `2`?
+
+Yes!
+
+Therefore:
+
+`2 + 7 = 9`
+
+We found the pair.
+
+### Simple idea
+
+For every number:
+
+> "What number do I need to reach the target?"
+
+Then check whether that number was already seen.
+
+---
+
+# Set vs Map / Dictionary
+
+This is very important.
+
+## Set
+
+Use Set when you mainly want to know:
+
+> "Does this value exist?"
+
+Example:
+
+> Have I already seen `7`?
+
+You mainly care about the value itself.
+
+Think:
+
+**Set = Remember values**
+
+---
+
+## Map / Dictionary
+
+Use Map or Dictionary when you want:
+
+> A value + some information about that value.
+
+Example:
+
+`2 → 3 times`
+
+`5 → 2 times`
+
+Here:
+
+- `2` = value
+- `3` = information about it
+
+Think:
+
+**Map/Dictionary = Value + Information**
+
+---
+
+# The 4 Patterns Together
+
+This is the most important part.
+
+## 1. Linear Traversal
+
+Think:
+
+> "Go through everything."
+
+Example:
+
+`[1, 2, 3, 4, 5]`
+
+You inspect:
+
+`1 → 2 → 3 → 4 → 5`
+
+Use for:
+
+- Maximum
+- Minimum
+- Sum
+- Count
+- Search
+
+---
+
+# 2. Two Pointers
+
+Think:
+
+> "Use two positions."
+
+Example:
+
+`→ [1 2 3 4 5 6] ←`
+
+Use for:
+
+- Reverse
+- Palindrome
+- Pair in sorted array
+- Moving elements
+- Comparing both ends
+
+---
+
+# 3. Sliding Window
+
+Think:
+
+> "Focus on a continuous section and move it."
+
+Example:
+
+`[1 2 3] 4 5 6`
+
+Then:
+
+`1 [2 3 4] 5 6`
+
+Then:
+
+`1 2 [3 4 5] 6`
+
+Use for:
+
+- Subarrays
+- Consecutive elements
+- K elements
+- Longest/shortest sections
+- Maximum/minimum window
+
+---
+
+# 4. Hashing
+
+Think:
+
+> "Remember what I've already seen."
+
+Example:
+
+Array:
+
+`[2, 5, 2, 8]`
+
+Memory:
+
+`2 → seen`
+
+`5 → seen`
+
+`8 → seen`
+
+Use for:
+
+- Frequency
+- Duplicates
+- Unique values
+- Two Sum
+- Fast lookup
+
+---
+
+# How to Recognize the Pattern
+
+This is more important than memorizing code.
+
+When you see an array problem, ask these questions.
+
+## Question 1
+
+> Do I need to inspect every element?
+
+If yes:
+
+**Linear Traversal**
+
+Example:
+
+> Find the largest number.
+
+You need to check all numbers.
+
+---
+
+## Question 2
+
+> Are two positions important?
+
+If yes:
+
+**Two Pointers**
+
+Example:
+
+> Reverse an array.
+
+You have:
+
+`left` and `right`.
+
+---
+
+## Question 3
+
+> Am I dealing with a continuous part of the array?
+
+If yes:
+
+**Sliding Window**
+
+Example:
+
+> Find maximum sum of 5 consecutive elements.
+
+The word **consecutive** is a big clue.
+
+---
+
+## Question 4
+
+> Would remembering previous values help?
+
+If yes:
+
+**Hashing**
+
+Example:
+
+> Find duplicates.
+
+Remember previously seen values.
+
+---
+
+## Question 5
+
+> Is the array sorted?
+
+This is an important clue.
+
+For example:
+
+> Find two numbers that add to a target.
+
+If sorted:
+
+**Two Pointers** can work well.
+
+If unsorted:
+
+**Hashing** can work well.
+
+So the same problem can have different solutions depending on the input.
+
+---
+
+# Easy Pattern Recognition Table
+
+| Problem clue | Pattern |
+|---|---|
+| Go through every element | Linear Traversal |
+| Find maximum/minimum | Linear Traversal |
+| Calculate sum | Linear Traversal |
+| Count elements | Linear Traversal |
+| Reverse | Two Pointers |
+| Compare first and last | Two Pointers |
+| Palindrome | Two Pointers |
+| Pair in sorted array | Two Pointers |
+| Continuous elements | Sliding Window |
+| Consecutive elements | Sliding Window |
+| Maximum sum of K | Sliding Window |
+| Minimum sum of K | Sliding Window |
+| Longest/shortest subarray | Sliding Window |
+| Frequency | Hashing |
+| Duplicate | Hashing |
+| Already seen | Hashing |
+| Fast lookup | Hashing |
+| Two Sum in unsorted array | Hashing |
+
+---
+
+# The Most Important Mental Model
+
+Don't start with:
+
+> "What code should I write?"
+
+Start with:
+
+> "What pattern does this problem look like?"
+
+For example:
+
+### Problem
+
+Find the largest number.
+
+Think:
+
+> Need to inspect all elements.
+
+→ **Linear Traversal**
+
+---
+
+### Problem
+
+Reverse an array.
+
+Think:
+
+> I have two ends.
+
+→ **Two Pointers**
+
+---
+
+### Problem
+
+Find maximum sum of 5 consecutive elements.
+
+Think:
+
+> Continuous + fixed size.
+
+→ **Fixed Sliding Window**
+
+---
+
+### Problem
+
+Find smallest continuous subarray whose sum is at least 20.
+
+Think:
+
+> Continuous + size can change.
+
+→ **Variable Sliding Window**
+
+---
+
+### Problem
+
+Find whether an array contains duplicates.
+
+Think:
+
+> Remember previous values.
+
+→ **Hashing / Set**
+
+---
+
+### Problem
+
+Find two numbers that add to target.
+
+If sorted:
+
+→ **Two Pointers**
+
+If unsorted:
+
+→ **Hashing**
+
+---
+
+# Final Cheat Sheet
+
+```text
+ARRAY PROBLEM
+      |
+      ↓
+Do I need to check everything?
+      |
+     YES
+      ↓
+LINEAR TRAVERSAL
+
+
+Do two positions matter?
+      |
+     YES
+      ↓
+TWO POINTERS
+
+
+Is it a continuous section?
+      |
+     YES
+      ↓
+SLIDING WINDOW
+
+
+Would remembering previous values help?
+      |
+     YES
+      ↓
+HASHING
+```
+
+And remember these four sentences:
+
+**Linear Traversal**
+
+> "Go through everything."
+
+**Two Pointers**
+
+> "Use two positions."
+
+**Sliding Window**
+
+> "Move a continuous section."
+
+**Hashing**
+
+> "Remember what I've already seen."
+
+These four patterns are the foundation for solving many basic and intermediate array problems. Pasted text

@@ -1,0 +1,83 @@
+
+### 7. `self`
+
+**Simple explanation:** `self` refers to the current object.
+
+**Definition:** `self` allows a method to access the attributes and methods belonging to the current object.
+
+**Example:** When two student objects have different names, `self.name` refers to the name belonging to whichever student object is currently being used. Pasted text
+
+---
+
+# OOP CONCEPTS
+
+### 8. Encapsulation
+
+**Simple explanation:** Encapsulation keeps related data and methods together inside a class and controls how that data is accessed.
+
+**Definition:** Encapsulation means grouping data and behavior together while controlling access to the data.
+
+**Example:** A bank account keeps its balance together with methods such as deposit and withdraw. Pasted text
+
+---
+
+### 9. Inheritance
+
+**Simple explanation:** Inheritance allows a child class to reuse properties and methods from a parent class.
+
+**Definition:** Inheritance allows one class to reuse functionality from another class.
+
+**Example:** A `Dog` class can inherit the `eat()` behavior from an `Animal` class and add its own `bark()` behavior. Pasted text
+
+---
+
+### 10. Polymorphism
+
+**Simple explanation:** Polymorphism means the same method name can behave differently for different objects.
+
+**Definition:** Polymorphism means the same interface can provide different behavior depending on the object.
+
+**Example:** Both a dog and a cat can have a `sound()` method, but the dog produces “Woof” while the cat produces “Meow.” Pasted text
+
+---
+
+### 11. Abstraction
+
+**Simple explanation:** Abstraction hides unnecessary internal details and shows only what the user needs.
+
+**Definition:** Abstraction means hiding implementation details while exposing necessary functionality.
+
+**Example:** When using an ATM, you choose to withdraw money without needing to know how the bank internally processes the transaction. Pasted text
+
+---
+
+### 12. Four OOP Concepts Together
+
+**Simple explanation:** The four major OOP concepts work together to organize larger programs.
+
+**Definition:** Encapsulation groups and controls data, inheritance reuses code, polymorphism allows different behavior, and abstraction hides implementation details.
+
+**Example:** In a banking application, account data is encapsulated, specialized accounts use inheritance, different accounts can calculate interest differently, and the user simply calls the interest calculation without seeing its internal process. Pasted text
+
+---
+
+### 13. Easy OOP Memory Map
+
+**Simple explanation:** These concepts form the basic structure you should remember when learning OOP.
+
+**Definition:** A class is a blueprint, an object is an instance, attributes are data, methods are actions, and `__init__` initializes the object.
+
+**Example:** Think of a car: the class is the blueprint, the actual car is the object, its color is an attribute, starting is a method, and `__init__` sets its initial information. Pasted text
+
+### Main memory
+
+**Class** → Blueprint  
+**Object** → Real thing  
+**Attribute** → Data  
+**Method** → Action  
+**`__init__`** → Initialize object  
+**`self`** → Current object  
+**Encapsulation** → Group + control data  
+**Inheritance** → Reuse code  
+**Polymorphism** → Same interface, different behavior  
+**Abstraction** → Hide implementation details Pasted text
