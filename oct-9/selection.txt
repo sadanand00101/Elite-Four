@@ -1,0 +1,29 @@
+[8,3,5,1]
+
+smallest => 1
+[9,7,4,2]
+
+smallest => 2
+swap => [2,7,4,9]
+2,4,7,9
+2,4,7,9
+steps:
+1. min_index = i
+2. min index search
+3.smallest min index found
+4.swap with first position in array 
+6. move to on next position i+1,j=i+1
+7.repeat 
+
+L                   R
+[1k,2k,3k,4k,.....10k] sorted 
+
+left 1000rs right hand 10000rs
+
+    
+       7000
+       
+
+
+
+
