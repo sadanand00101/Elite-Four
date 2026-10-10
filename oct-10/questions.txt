@@ -1,0 +1,99 @@
+DSA PRACTICE QUESTIONS
+TOPICS: TWO POINTERS, FAST AND SLOW POINTERS, SLIDING WINDOW
+
+PART 1: TWO POINTERS
+
+Question 1: Reverse an Array
+
+Given an array of integers, reverse the array using two pointers.
+
+Example:
+Input:  [1, 2, 3, 4, 5]
+Output: [5, 4, 3, 2, 1]
+
+
+Question 2: Check Palindrome Array
+
+Given an array of integers, check whether the array reads the same forward and backward.
+
+Example 1:
+Input:  [1, 2, 3, 2, 1]
+Output: true
+
+Example 2:
+Input:  [1, 2, 3, 4]
+Output: false
+
+
+PART 2: FAST AND SLOW POINTERS
+
+Question 3: Find the Middle Element of an Array
+
+Given an array of integers, find the middle element using fast and slow pointers.
+
+Rules:
+- The slow pointer moves one step at a time.
+- The fast pointer moves two steps at a time.
+- When the fast pointer reaches the end, the slow pointer points to the middle element.
+
+Example 1:
+Input:  [10, 20, 30, 40, 50]
+Output: 30
+
+Example 2:
+Input:  [2, 4, 6, 8, 10, 12]
+Output: 8
+
+
+Question 4: Find the Middle Position of an Array
+
+Given an array of integers, use fast and slow pointers to find the middle position of the array.
+
+Rules:
+- The slow pointer moves one step at a time.
+- The fast pointer moves two steps at a time.
+- Return the index of the middle element when the fast pointer reaches the end.
+
+Example 1:
+Input:  [10, 20, 30, 40, 50]
+Output: 2
+
+Example 2:
+Input:  [5, 10, 15, 20, 25, 30]
+Output: 3
+
+Note:
+For an even-length array, return the index of the second middle element.
+
+
+PART 3: SLIDING WINDOW
+
+Question 5: Maximum Sum of a Subarray of Size K
+
+Given an array of integers and an integer K, find the maximum sum of any consecutive K elements.
+
+Example:
+Input:  nums = [2, 1, 5, 1, 3, 2]
+       K = 3
+
+Output: 9
+
+Explanation:
+The subarray [5, 1, 3] has the maximum sum.
+Maximum sum = 5 + 1 + 3 = 9.
+
+
+Question 6: Average of Every Subarray of Size K
+
+Given an array of integers and an integer K, find the average of every consecutive subarray of size K.
+
+Example:
+Input:  nums = [1, 2, 3, 4, 5]
+       K = 3
+
+Output: [2, 3, 4]
+
+Explanation:
+Average of [1, 2, 3] = 2
+Average of [2, 3, 4] = 3
+Average of [3, 4, 5] = 4

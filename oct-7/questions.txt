@@ -59,7 +59,7 @@ Find:
 3.	Maximum
 4.	Minimum
 5.	Number of even values
-6.	Frequency of every value
+6.	Frequency of every value 
 7.	Most frequent value
 8.	Least frequent value
 9.	Number of unique values
