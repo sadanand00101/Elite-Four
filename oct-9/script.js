@@ -24,24 +24,3 @@
 // }
 // console.log("reversed array",arr)
 
-
-let arr = [1, 2, 3, 4, 6, 8];
-let target = 10;
-let left = 0;
-let right = arr.length - 1;
-while (left < right) {
-let sum = arr[left] + arr[right];
-if (sum === target) {
-    console.log(arr[left], arr[right]);
-    break;
-}
-if (sum < target) {
-    left++;
-} else {
-    right--;
-}
-}
-
-
-
-

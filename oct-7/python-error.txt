@@ -89,43 +89,21 @@ Exception handling is used to handle problems that happen while a Python program
 **Definition:** The `else` block contains code that should run after successful execution.
 
 **Example:** If a number is valid and division succeeds, the result can be displayed in `else`. Pasted text(7)
-
----
-
 ### 10. `finally`
-
 **Simple explanation:** `finally` runs whether an exception occurs or not.
-
 **Definition:** `finally` contains code that must execute after the `try`/`except` process.
-
 **Example:** A program can display “Program finished” even when an error occurs. Pasted text(7)
-
----
-
 ### 11. `try + except + else + finally`
-
 **Simple explanation:** These four parts can work together to handle errors, successful execution, and cleanup.
-
 **Definition:** `try` tests code, `except` handles errors, `else` handles success, and `finally` always runs.
-
 **Example:** A calculator can handle invalid input, show the result when successful, and then always display that the operation is finished. Pasted text(7)
-
----
-
 ### 12. Why `finally` Is Useful
-
 **Simple explanation:** `finally` is useful when something must be cleaned up regardless of whether the operation succeeds or fails.
-
 **Definition:** Cleanup code is code that should run after an operation is finished.
-
 **Example:** A file is opened and used, then closed whether an error occurs or not. Pasted text(7)
-
 ---
-
 ### 13. `raise`
-
 **Simple explanation:** `raise` lets you create an exception yourself.
-
 **Definition:** `raise` manually triggers an exception when a condition is not acceptable.
 
 **Example:** If an age is negative, the program can raise a `ValueError` saying the age cannot be negative. Pasted text(7)
