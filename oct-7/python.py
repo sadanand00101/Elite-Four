@@ -40,6 +40,6 @@
 # print(random.shuffle(alphabets))
 
 # print(alphabets)
-class = stud
-obj={string name,int age}
-stud objects=60
+# class = stud
+# obj={string name,int age}
+# stud objects=60

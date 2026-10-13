@@ -11,6 +11,8 @@
 //     if(length<minLength){
 //         minLength=length;
           
+
+
 //     }
 //     sum-=arr[left];
 //     left++
@@ -33,6 +35,7 @@
 //     prefixArray.push(sum)
 
 // }
+
 
 // console.log(prefixArray)
 
@@ -57,15 +60,16 @@
 // }
 // console.log(freq)
 
-let arr=[10,20,30,10,20,10]
-let seen=new Set()
-let duplicates=new Set()
-for (let num of arr){
-    if(seen.has(num)){
-        duplicates.add(num)
-    }
-    else{
-        seen.add(num)
-    }
-}
-console.log(duplicates)
+// let arr=[10,20,30,10,20,10]
+// let seen=new Set()
+// let duplicates=new Set()
+// for (let num of arr){
+//     if(seen.has(num)){
+//         duplicates.add(num)
+//     }
+//     else{
+//         seen.add(num)
+//     }
+// }
+// console.log(duplicates)
+
